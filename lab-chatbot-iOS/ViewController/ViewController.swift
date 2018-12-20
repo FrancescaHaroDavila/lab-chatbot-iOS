@@ -8,8 +8,17 @@
 
 import UIKit
 import Alamofire
+import MessageKit
+import PusherChatkit
+import MessageInputBar
 
 class ViewController: UIViewController {
+    @IBOutlet weak var messageTextField: UITextField!
+    var NetworkInstance = Network()
+    @IBAction func sendButton(_ sender: UIButton) {
+      NetworkInstance.sendMessageRequest(message: messageTextField.text!)
+    }
+  
 
     override func viewDidLoad() {
         super.viewDidLoad()
