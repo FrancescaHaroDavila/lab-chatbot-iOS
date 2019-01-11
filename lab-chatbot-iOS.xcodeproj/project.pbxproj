@@ -8,19 +8,28 @@
 
 /* Begin PBXBuildFile section */
 		83BDCE22D255C2ABF5CB2ECE /* Pods_lab_chatbot_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 355F385952AF3F7120FCCEA0 /* Pods_lab_chatbot_iOS.framework */; };
+		8D97949921CD856100145D88 /* ChatManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D97949821CD856100145D88 /* ChatManager.swift */; };
+		8D97949B21CD85F100145D88 /* RequestHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D97949A21CD85F100145D88 /* RequestHandler.swift */; };
+		8D97949D21CD875700145D88 /* AlamofireClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D97949C21CD875700145D88 /* AlamofireClient.swift */; };
 		8D9E3B4521CBF6F400417CBE /* SendMessageRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D9E3B4421CBF6F400417CBE /* SendMessageRequest.swift */; };
+		8DA6891221CD2FB2001B0DF1 /* Answer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DA6891121CD2FB2001B0DF1 /* Answer.swift */; };
 		8DC00D8721C982EF0079A904 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DC00D8621C982EF0079A904 /* AppDelegate.swift */; };
 		8DC00D8921C982EF0079A904 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DC00D8821C982EF0079A904 /* ViewController.swift */; };
 		8DC00D8C21C982EF0079A904 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8DC00D8A21C982EF0079A904 /* Main.storyboard */; };
 		8DC00D8E21C982F00079A904 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8DC00D8D21C982F00079A904 /* Assets.xcassets */; };
 		8DC00D9121C982F00079A904 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8DC00D8F21C982F00079A904 /* LaunchScreen.storyboard */; };
+		8DCB410221CD358C00F78436 /* Watson.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DCB410121CD358C00F78436 /* Watson.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		355F385952AF3F7120FCCEA0 /* Pods_lab_chatbot_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_lab_chatbot_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		70625E79AA87DD62D7887725 /* Pods-lab-chatbot-iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-lab-chatbot-iOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-lab-chatbot-iOS/Pods-lab-chatbot-iOS.debug.xcconfig"; sourceTree = "<group>"; };
 		767A7582591B7AF6975CA86B /* Pods-lab-chatbot-iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-lab-chatbot-iOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-lab-chatbot-iOS/Pods-lab-chatbot-iOS.release.xcconfig"; sourceTree = "<group>"; };
+		8D97949821CD856100145D88 /* ChatManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatManager.swift; sourceTree = "<group>"; };
+		8D97949A21CD85F100145D88 /* RequestHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestHandler.swift; sourceTree = "<group>"; };
+		8D97949C21CD875700145D88 /* AlamofireClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlamofireClient.swift; sourceTree = "<group>"; };
 		8D9E3B4421CBF6F400417CBE /* SendMessageRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendMessageRequest.swift; sourceTree = "<group>"; };
+		8DA6891121CD2FB2001B0DF1 /* Answer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Answer.swift; sourceTree = "<group>"; };
 		8DC00D8321C982EF0079A904 /* lab-chatbot-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "lab-chatbot-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8DC00D8621C982EF0079A904 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8DC00D8821C982EF0079A904 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -28,6 +37,7 @@
 		8DC00D8D21C982F00079A904 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8DC00D9021C982F00079A904 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8DC00D9221C982F00079A904 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8DCB410121CD358C00F78436 /* Watson.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Watson.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +65,8 @@
 			isa = PBXGroup;
 			children = (
 				8D9E3B4421CBF6F400417CBE /* SendMessageRequest.swift */,
+				8D97949A21CD85F100145D88 /* RequestHandler.swift */,
+				8D97949C21CD875700145D88 /* AlamofireClient.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -89,8 +101,18 @@
 			isa = PBXGroup;
 			children = (
 				8D9E3B4321CBF6BF00417CBE /* Network */,
+				8D97949821CD856100145D88 /* ChatManager.swift */,
 			);
 			path = Managers;
+			sourceTree = "<group>";
+		};
+		8DA6891021CD2F97001B0DF1 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				8DA6891121CD2FB2001B0DF1 /* Answer.swift */,
+				8DCB410121CD358C00F78436 /* Watson.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		8DC00D7A21C982EF0079A904 = {
@@ -114,6 +136,7 @@
 		8DC00D8521C982EF0079A904 /* lab-chatbot-iOS */ = {
 			isa = PBXGroup;
 			children = (
+				8DA6891021CD2F97001B0DF1 /* Model */,
 				8DC00D9221C982F00079A904 /* Info.plist */,
 				8DA2CCD721CAC40100F80822 /* Managers */,
 				8DA2CCD421CAC38500F80822 /* Storyboard */,
@@ -233,10 +256,12 @@
 				"${SRCROOT}/Pods/Target Support Files/Pods-lab-chatbot-iOS/Pods-lab-chatbot-iOS-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/BeamsChatkit/BeamsChatkit.framework",
+				"${BUILT_PRODUCTS_DIR}/HPGrowingTextView/HPGrowingTextView.framework",
 				"${BUILT_PRODUCTS_DIR}/MessageInputBar/MessageInputBar.framework",
 				"${BUILT_PRODUCTS_DIR}/MessageKit/MessageKit.framework",
 				"${BUILT_PRODUCTS_DIR}/PusherChatkit/PusherChatkit.framework",
 				"${BUILT_PRODUCTS_DIR}/PusherPlatform/PusherPlatform.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
@@ -244,10 +269,12 @@
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/BeamsChatkit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/HPGrowingTextView.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MessageInputBar.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MessageKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PusherChatkit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PusherPlatform.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -261,9 +288,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8D97949B21CD85F100145D88 /* RequestHandler.swift in Sources */,
 				8DC00D8921C982EF0079A904 /* ViewController.swift in Sources */,
 				8DC00D8721C982EF0079A904 /* AppDelegate.swift in Sources */,
 				8D9E3B4521CBF6F400417CBE /* SendMessageRequest.swift in Sources */,
+				8D97949921CD856100145D88 /* ChatManager.swift in Sources */,
+				8DCB410221CD358C00F78436 /* Watson.swift in Sources */,
+				8DA6891221CD2FB2001B0DF1 /* Answer.swift in Sources */,
+				8D97949D21CD875700145D88 /* AlamofireClient.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

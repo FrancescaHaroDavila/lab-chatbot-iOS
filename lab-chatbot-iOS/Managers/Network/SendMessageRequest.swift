@@ -8,32 +8,35 @@
 
 import Foundation
 import Alamofire
+
+//{}
+
+enum ConnectionError: Error {
+  case forbiden
+}
+
 public class Network {
   
-  func sendMessageRequest(message: String){
+  func sendMessageRequest(message: String, completion: @escaping ((NetworkResponse<Data>) -> Void)) {
     
     let url = "http://chabotbe.mybluemix.net/dialog_mobile/conversation"
     let parameters = ["message": message]
     
-    
     Alamofire.request(url, method: .post, parameters: parameters, encoding: JSONEncoding.default)
       .responseJSON { response in
         print(response)
-        //to get status code
-        if let status = response.response?.statusCode {
-          switch(status){
-          case 201:
-            print("example success")
-          default:
-            print("error with response status: \(status)")
+        
+        guard let _ = response.error else {
+          //to get JSON return value
+          if let data = response.data {
+            //let JSON = result as! NSDictionary
+            completion(.success(data))
           }
+          return
         }
         
-        //to get JSON return value
-        if let result = response.result.value {
-          let JSON = result as! NSDictionary
-          print(JSON)
-        }
+        completion(.failure(.forbiden))
+        
     }
     
   }

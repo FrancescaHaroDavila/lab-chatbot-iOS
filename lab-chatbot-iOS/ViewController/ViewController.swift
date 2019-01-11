@@ -8,22 +8,29 @@
 
 import UIKit
 import Alamofire
-import MessageKit
-import PusherChatkit
-import MessageInputBar
+import HPGrowingTextView
+import SwiftyJSON
 
-class ViewController: UIViewController {
-    @IBOutlet weak var messageTextField: UITextField!
-    var NetworkInstance = Network()
-    @IBAction func sendButton(_ sender: UIButton) {
-      NetworkInstance.sendMessageRequest(message: messageTextField.text!)
-    }
+class ViewController: UIViewController, HPGrowingTextViewDelegate, UITableViewDelegate {
   
+  @IBOutlet weak var messageTextView: HPGrowingTextView!
+  
+  var NetworkInstance = Network()
+  var chatManager: ChatManager?
+  
+  override func viewDidLoad() {
+    super.viewDidLoad()
+    chatManager = ChatManager(requestHandler: AlamofireClient())
+  }
+  
+  @IBAction func sendButton(_ sender: UIButton) {
+    chatManager?.botAnswerForMessage(messageTextView.text, completion: { answerText in
+      print(answerText)
+    })
+  }
+  	
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-       
-    }
+  
 }
 
         
